@@ -2,7 +2,7 @@ settings:
   title: 'Status Page'
   url: 'https://status.moonc.cc' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 365 # number of days you want to display in histogram
+  daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
@@ -24,19 +24,20 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: o-moonc-cc
+    name: Oracle Tokyo Server
+    #description: 'Built for anything connected to the Internet.'
+    url: 'https://o.moonc.cc/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: hmb-moonc-cc
+    name: Half Moon Bay Los Angeles Server
+    url: 'https://hmb.moonc.cc/'
     method: GET
     expectStatus: 200
+    linkable: true
 
   - id: moonc-cc
     name: Moonc main website
@@ -44,4 +45,38 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
-    
+
+  - id: moonc-top-alist
+    name: Alist on moonc.top
+    url: 'https://moonc.top/alist/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: sg-moonc-cc
+    name: Greencloud Singapore Server
+    url: 'https://sg.moonc.cc/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: se-moonc-cc
+    name: Hosthatch Stockholm Server
+    url: 'https://se.moonc.cc/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: akko-moonc-cc
+    name: AkkoCloud Los Angeles Server
+    url: 'https://akko.moon.cc/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: akile-moonc-cc
+    name: AkileCloud Taiwan Server
+    url: 'https://tw.moonc.cc/'
+    method: GET
+    expectStatus: 200
+    linkable: true
