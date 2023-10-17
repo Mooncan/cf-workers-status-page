@@ -69,7 +69,7 @@ monitors:
 
   - id: akko-moonc-cc
     name: AkkoCloud Los Angeles Server
-    url: 'https://akko.moon.cc/'
+    url: 'https://akko.moon.cc:8443/'
     method: GET
     expectStatus: 200
     linkable: true
